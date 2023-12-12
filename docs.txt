@@ -1,0 +1,34 @@
+Memiliki tabel tabel:
+    1. pasien = [
+        'nama', => string
+        'no_bpjs', => string, unique
+        'no_tlp', => string
+        'tb', => integer
+        'bb', => integer
+        'td', => integer
+        'last_activity', => string
+        'tgl_kunjungan', => datetime, now
+        'tgl_kembali', => date
+    ],
+    2. pnc = [
+        's', => integer
+        'r', => integer
+        'n', => integer
+        'kunjungan', => enum(1, 2, 3, 4)
+        'gpa', => integer
+        'keluhan', =>text
+        'terapi', => string
+        'nama_bidan', => string, system
+        'method_payment', => enum('JKN', 'Mandiri')
+        'payment' => integer
+    ], Relasi ke Pasien dengan "Pasien < PNC"
+    3. kb = [
+        'jenis_kb', => enum('Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant')
+        'kb_terakhir', => enum('Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant')
+        'tgl_kb_terakhir', => date
+        'jml_anak_lk', => integer
+        'jml_anak_pr', => integer
+        'hamil', => boolean
+        'method_payment', enum('JKN', 'Mandiri')
+        'payment' => integer
+    ], Relasi ke Pasie dengan "Pasien < KB"

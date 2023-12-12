@@ -57,7 +57,7 @@
 <body>
   <div id="loading">
     <span class="loader">
-      <img src="{{ asset('img/tarahole-icon.png') }}" alt="tarahole-loader" width="250">
+      <img src="{{ asset('img/tarahole-icon.png') }}" alt="tarahole-loader" width="250px">
     </span>
       <div class="textLoader">
           <center>
@@ -79,10 +79,7 @@
                 <th>No Telepon</th>
                 <th>Tgl Kunjungan</th>
                 <th>Tgl Kembali</th>
-                <th>Jenis KB</th>
-                <th colspan="2">KB Terakhir</th>
                 <th>Hamil</th>
-                <th colspan="2">Payment</th>
                 {{-- <th>Action</th> --}}
             </tr>
         </thead>
@@ -96,9 +93,6 @@
                     <td>{{ $row['no_telepon'] }}</td>
                     <td>{{ $row['tgl_kunjungan'] }}</td>
                     <td>{{ $row['tgl_kembali'] }}</td>
-                    <td>{{ $row['jenis_kb'] }}</td>
-                    <td>Jenis : {{ $row['kb_terakhir'] }}</td>
-                    <td> Tgl : {{ $row['tgl_kb_terakhir'] }}</td>
                     <td>
                       @if ($row['hamil'] == 1)
                         Ya
@@ -106,8 +100,6 @@
                         Tidak
                       @endif
                     </td>
-                    <td>Metode : {{ $row['metode_payment'] }}</td>
-                    <td> Rp. {{ number_format($row['payment'],0,',','.') }}</td>
                     {{-- <td>
                       <a href="{{ route('user-edit', ['id' => $user['id']]) }}"><button style="cursor: pointer">Edit</button></a>
                       <a href="#"><button style="cursor: pointer">Destroy</button></a>
@@ -133,7 +125,7 @@
 
   <script type="text/javascript">
     // set delay 10s
-    var delay = 10000;
+    var delay = 3000;
 
     $(window).on('load', function() {
         setTimeout(function(){
