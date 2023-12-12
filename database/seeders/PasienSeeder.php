@@ -16,17 +16,13 @@ class PasienSeeder extends Seeder
         Pasien::create(
             [
                 'name' => 'Pasien',
-                'nama_bidan' => 'Bidan',
                 'no_bpjs' => 'xxxxxxxxxx',
                 'no_telepon' => '08xxxxxxxxxx',
+                'tb' => '206',
+                'bb' => '70',
+                'td' => '100',
                 'tgl_kunjungan' => now(),
                 'tgl_kembali' => now(),
-                'metode_payment' => 'Mandiri',
-                'payment' => '1000000',
-                'jenis_kb' => 'Pil',
-                'kb_terakhir' => 'Pil',
-                'tgl_kb_terakhir' => now(),
-                'hamil' => 0,
             ],
         );
     }

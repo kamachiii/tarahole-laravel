@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('kbs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->string('nama_bidan');
             $table->enum('jenis_kb', ['Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant']);
             $table->enum('kb_terakhir', ['Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant']);
             $table->date('tgl_kb_terakhir');
             $table->integer('lk');
             $table->integer('pr');
             $table->boolean('hamil');
+            $table->text('keluhan');
             $table->enum('metode_payment', ['JKN', 'Mandiri']);
             $table->bigInteger('payment');
             $table->timestamps();
