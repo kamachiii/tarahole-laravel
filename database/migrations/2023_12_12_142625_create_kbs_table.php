@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('kbs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->unsignedBigInteger('pasien_id');
             $table->string('nama_bidan');
             $table->enum('jenis_kb', ['Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant']);
             $table->enum('kb_terakhir', ['Suntik 1 bulan', 'Suntik 2 bulan', 'Suntik 3 bulan', 'Pil', 'IUD', 'Implant']);
@@ -25,6 +25,8 @@ return new class extends Migration
             $table->enum('metode_payment', ['JKN', 'Mandiri']);
             $table->bigInteger('payment');
             $table->timestamps();
+
+            $table->foreign('pasien_id')->references('id')->on('pasiens')->onDelete('cascade');
         });
     }
 

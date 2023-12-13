@@ -15,7 +15,7 @@ class PasienSeeder extends Seeder
     {
         Pasien::create(
             [
-                'name' => 'Pasien',
+                'nama' => 'Pasien',
                 'no_bpjs' => 'xxxxxxxxxx',
                 'no_telepon' => '08xxxxxxxxxx',
                 'tb' => '206',

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pncs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->unsignedBigInteger('pasien_id');
             $table->integer('s');
             $table->integer('r');
             $table->integer('n');
@@ -25,6 +25,8 @@ return new class extends Migration
             $table->enum('method_payment', ['JKN', 'Mandiri']);
             $table->bigInteger('payment');
             $table->timestamps();
+
+            $table->foreign('pasien_id')->references('id')->on('pasiens')->onDelete('cascade');
         });
     }
 

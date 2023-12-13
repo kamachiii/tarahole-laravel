@@ -15,7 +15,7 @@ class PncSeeder extends Seeder
     {
         Pnc::create(
             [
-                'user_id' => 1,
+                'pasien_id' => 1,
                 's' => 1,
                 'r' => 2,
                 'n' => 3,

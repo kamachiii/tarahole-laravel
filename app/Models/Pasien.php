@@ -10,17 +10,19 @@ class Pasien extends Model
     use HasFactory;
     protected $table = 'pasiens';
     protected $fillable = [
-        'name',
-        'nama_bidan',
+        'nama',
         'no_bpjs',
+        'bb',
+        'tb',
+        'td',
         'no_telepon',
         'tgl_kunjungan',
         'tgl_kembali',
-        'metode_payment',
-        'payment',
-        'jenis_kb',
-        'kb_terakhir',
-        'tgl_kb_terakhir',
-        'hamil'
     ];
+    public function pncs(){
+        return $this->hasMany(Pnc::class);
+    }
+    public function kbs(){
+        return $this->hasMany(Kb::class);
+    }
 }

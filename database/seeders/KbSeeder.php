@@ -15,7 +15,7 @@ class KbSeeder extends Seeder
     {
         Kb::create(
             [
-                'user_id' => 1,
+                'pasien_id' => 1,
                 'nama_bidan' => 'Dr. Good Game',
                 'jenis_kb' => 'Pil',
                 'kb_terakhir' => 'Pil',

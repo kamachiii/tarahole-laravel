@@ -6,7 +6,6 @@ Memiliki tabel tabel:
         'tb', => integer
         'bb', => integer
         'td', => integer
-        'last_activity', => string
         'tgl_kunjungan', => datetime, now
         'tgl_kembali', => date
     ],

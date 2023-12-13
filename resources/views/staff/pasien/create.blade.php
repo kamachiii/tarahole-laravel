@@ -16,13 +16,13 @@
         @endif
         @csrf
         <input type="text" name="name" placeholder="name" required><br>
-        <input type="text" name="nama_bidan" placeholder="nama_bidan" value="{{ Auth::user()->name }}" hidden>
         <input type="number" name="no_bpjs" placeholder="no_bpjs" required><br>
         <input type="number" name="no_telepon" placeholder="no_telepon" required><br>
+        <input type="text" name="tb" placeholder="tb"><input type="text" name="bb" placeholder="bb"><input type="text" name="td" placeholder="td"> <br>
         <input type="datetime-local" name="tgl_kunjungan" value="{{ now()->setTimezone('asia/jakarta') }}" required><br>
         <input type="date" name="tgl_kembali">
             <br>
-        <div class="checkbox-jenis-kb">
+        {{-- <div class="checkbox-jenis-kb">
             <label>Jenis KB</label>
                 <br>
             <input type="checkbox" name="jenis_kb" value="Suntik 1 bulan">Suntik 1 bulan</input>
@@ -57,7 +57,7 @@
             <input type="radio" name="metode_payment" value="Mandiri">Mandiri</input>
         </div>
         <input type="text" name="payment" placeholder="payment" id="payment">
-            <br>
+            <br> --}}
         <button type="submit">Submit</button>
     </form>
 
